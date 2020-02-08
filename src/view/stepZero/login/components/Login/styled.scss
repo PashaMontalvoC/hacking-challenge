@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Lato&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);
+
+$lato: 'Lato', serif;
+$roboto: 'Roboto', sans-serif;
+
+.login {
+    width: calc(100% - 728px);
+    max-width: 100%;
+    padding: 96px 0;
+    display: flex;
+    justify-content: center;
+
+    @media(max-width: 1240px) {
+        width: 100%;
+    }
+}
+
+.login__title {
+    font-family: $lato;
+    margin: 0;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 300;
+    color: #494F66;
+
+    span {
+        color: #EF3340;
+        font-weight: bold;
+    }
+}
+
+.login__information {
+    font-family: $roboto;
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #676F8F;
+}

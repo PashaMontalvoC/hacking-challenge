@@ -1,0 +1,1 @@
+export { RimacBanner } from './RimacBanner';
