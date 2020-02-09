@@ -7,13 +7,11 @@ interface Props {
 }
 
 export const RimacBanner: React.FC<Props> = ({ children }) => (
-    <div className="container">
-        <div className="banner">
-            <div className="banner__title">
-                <img src={rimacLogo} />
-            </div>
-            {children}
-            <img className="banner__family" />
+    <div className="banner">
+        <div className="banner__title">
+            <img src={rimacLogo} />
         </div>
+        {children}
+        <img className="banner__family" />
     </div>
 );

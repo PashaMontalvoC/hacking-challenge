@@ -13,4 +13,5 @@ export const InputWrapper = styled.input`
     align-items: center;
     font-family: Lato;
     font-size: 16px;
+    user-select: none;
 `;

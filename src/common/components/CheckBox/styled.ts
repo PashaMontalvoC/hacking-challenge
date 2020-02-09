@@ -79,6 +79,8 @@ export const Text = styled.span`
   font-family: Roboto;
   width: ${(props: Props) => props.widthLabel && `${props.widthLabel}px`};
   line-height: 20px;
+  opacity: .8;
+  padding-right: 10px;
 `;
 
 export const CheckMark = styled.div`

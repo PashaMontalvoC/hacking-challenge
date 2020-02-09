@@ -1,0 +1,1 @@
+export { person as personReducer } from './reducer';

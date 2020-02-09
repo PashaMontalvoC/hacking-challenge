@@ -6,6 +6,7 @@ import { Wrapper, FormWrapper, Button } from './styled';
 import * as validate from '../../../../../utils/validations';
 import { RenderCheckBox } from '../../../../../common/components/RenderCheckBox';
 import { useSelector } from 'react-redux';
+import { fetchPerson } from '../../state/person/actions';
 
 interface Props {
     handleSubmit: Function;
@@ -28,8 +29,7 @@ const Form: React.FC<Props> = ({ handleSubmit }) => {
     const labelPersonPhoneNumbert = personPhoneNumber ? 'Celular' : '';
 
     const formErrors = formValues && formValues.syncErrors;
-
-
+    
     return(
         <div className="login">
             <Wrapper>
@@ -51,7 +51,7 @@ const Form: React.FC<Props> = ({ handleSubmit }) => {
                     <Field
                         component={RenderInput}
                         width={288}
-                        maxLength={15}
+                        maxLength={10}
                         placeholder="Fecha de nacimiento"
                         name="personBirth"
                         validate={[validate.required, validate.birthDate]}
@@ -96,5 +96,7 @@ const Form: React.FC<Props> = ({ handleSubmit }) => {
 
 export const Login = reduxForm({
     form: 'stepZero',
-    onSubmit(fields){}
+    onSubmit(fields, dispatch, { history }){
+        dispatch(fetchPerson(history));
+    }
 })(Form);

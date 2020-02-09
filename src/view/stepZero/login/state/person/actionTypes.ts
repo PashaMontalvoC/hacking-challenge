@@ -1,0 +1,5 @@
+const ROOT = 'stepZero/login/person';
+
+export const FETCH_PERSON_REQUEST = `${ROOT}/FETCH_PERSON_REQUEST`;
+export const FETCH_PERSON_SUCCESS = `${ROOT}/FETCH_PERSON_SUCCESS`;
+export const FETCH_PERSON_FAILURE = `${ROOT}/FETCH_PERSON_FAILURE`;

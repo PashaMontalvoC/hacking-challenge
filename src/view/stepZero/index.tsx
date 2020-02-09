@@ -3,9 +3,13 @@ import { BannerFeature } from './banner';
 import { LoginFeature } from './login';
 import './styled.scss';
 
-export const StepZero: React.FC = () => (
+interface Props {
+    history?: any;
+}
+
+export const StepZero: React.FC<Props> = ({ history }) => (
     <div className="stepZero">
         <BannerFeature />
-        <LoginFeature />
+        <LoginFeature history={history} />
     </div>
 );
