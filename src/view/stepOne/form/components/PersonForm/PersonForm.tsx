@@ -11,6 +11,7 @@ import {
 import { useSelector, useDispatch } from 'react-redux';
 import { RenderSelect } from '../../../../../common/components/RenderSelect';
 import { PersonModel } from '../../../../stepZero/login/model/personModel';
+import { BreadCrumb } from '../../../../../common/components/BreadCrumb';
 
 const options = [
     {
@@ -61,8 +62,13 @@ const Form: React.FC<Props> = ({ handleSubmit, history }) => {
         }
       }, []);
     
+    const handleClickBreadCrumb = () => {
+        history.push('/');
+    };
+
     return(
         <div className="personForm">
+            <BreadCrumb stepNumber={1} handleClick={handleClickBreadCrumb} />
             <Wrapper>
                 <h2 className="personForm__title">
                     Hola, <span>{personName}</span>

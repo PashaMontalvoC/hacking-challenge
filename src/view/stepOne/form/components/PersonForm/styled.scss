@@ -10,6 +10,7 @@ $roboto: 'Roboto', sans-serif;
     padding: 68px 0;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 
     @media(max-width: 1240px) {
         width: 100%;

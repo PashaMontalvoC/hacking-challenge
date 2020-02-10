@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
     max-width: 505px;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
 `;
 
 export const FormWrapper = styled.form`
