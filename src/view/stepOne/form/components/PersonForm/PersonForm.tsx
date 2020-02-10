@@ -1,55 +1,95 @@
 import * as React from 'react';
 import './styled.scss';
 import { RenderInput } from '../../../../../common/components/RenderInput';
-import { Field, reduxForm } from 'redux-form';
-import { Wrapper, FormWrapper } from './styled';
-import { useSelector } from 'react-redux';
+import { Field, reduxForm, change } from 'redux-form';
+import {
+    Wrapper,
+    FormWrapper,
+    DocumentWrapper,
+    DocumentType
+} from './styled';
+import { useSelector, useDispatch } from 'react-redux';
+import { RenderSelect } from '../../../../../common/components/RenderSelect';
+import { PersonModel } from '../../../../stepZero/login/model/personModel';
+
+const options = [
+    {
+        value: '2',
+        label: 'DNI'
+    },
+    {
+        value: '3',
+        label: 'CE'
+    }
+];
 
 interface Props {
     handleSubmit: Function;
+    history: any;
 }
 
-const Form: React.FC<Props> = ({ handleSubmit }) => {
+const Form: React.FC<Props> = ({ handleSubmit, history }) => {
 
     const formValues = useSelector(state => state.form.stepOne);
-    const personName = useSelector(state =>state.person.data.name);
-
-    const camelizeString = (word: string) => {
-        return word.replace(/(?:^\w|[A-Z]|\b\w)/g, function(element, index) {
-          return index == 0 ? element.toLowerCase() : element.toUpperCase();
-        }).replace(/\s+/g, '');
-    }
-
-    console.log('PÈRSON', personName);
+    let personData: PersonModel;
 
     const personDocument = formValues && formValues.values && formValues.values.personDocument;
-    const personBirth = formValues && formValues.values && formValues.values.personBirth;
-    const personPhoneNumber = formValues && formValues.values && formValues.values.personPhoneNumber;
+    const personName = formValues && formValues.values && formValues.values.personName;
+    const personLastNameFather = formValues && formValues.values && formValues.values.personLastNameFather;
+    const personLastNameMother = formValues && formValues.values && formValues.values.personLastNameMother;
+    const personBirthDate = formValues && formValues.values && formValues.values.personBirthDate;
 
     const labelPersonDocument = personDocument ? 'Nro de Documento' : '';
-    const labelPersonBirth = personBirth ? 'Fecha de nacimiento' : '';
-    const labelPersonPhoneNumbert = personPhoneNumber ? 'Celular' : '';
+    const labelPersonName = personName ? 'Nombres' : '';
+    const labelPersonLastNameFather = personLastNameFather ? 'Apellido Paterno' : '';
+    const labelPersonLastNameMother = personLastNameMother ? 'Apellido Materno' : '';
+    const labelPersonBirthDate = personBirthDate ? 'Fecha de Nacimiento' : '';
 
-    const formErrors = formValues && formValues.syncErrors;
+    const dispatch = useDispatch();
+
+    React.useEffect(() => {
+        personData = JSON.parse(localStorage.getItem('rimacPerson'));
+        if (personData) {
+            dispatch(change('stepOne', 'typeDocument', personData.documentType));
+            dispatch(change('stepOne', 'personDocument', personData.documentNumber));
+            dispatch(change('stepOne', 'personName', personData.name));
+            dispatch(change('stepOne', 'personLastNameFather', personData.lastNameFather));
+            dispatch(change('stepOne', 'personLastNameMother', personData.lastNameMother));
+            dispatch(change('stepOne', 'personBirthDate', personData.birthDate));
+        } else {
+            history.push('/');
+        }
+      }, []);
     
     return(
         <div className="personForm">
             <Wrapper>
                 <h2 className="personForm__title">
-                    Hola, <span>{personName && camelizeString(personName)}</span>
+                    Hola, <span>{personName}</span>
                 </h2>
                 <span className="personForm__information">Valida que los datos sean correctos.</span>
                 <span className="personForm__data">Datos personales del titular</span>
                 <FormWrapper onSubmit={handleSubmit}>
-                    <Field
-                        component={RenderInput}
-                        type="number"
-                        width={480}
-                        placeholder="Nro de Documento"
-                        name="personDocument"
-                        maxLength={8}
-                        labelText={labelPersonDocument}
-                    />
+                    <DocumentWrapper>
+                        <DocumentType>
+                            <Field 
+                                component={RenderSelect}
+                                name="typeDocument"
+                                options={options}
+                                width="90px"
+                            />
+                        </DocumentType>
+                        <Field
+                            component={RenderInput}
+                            type="number"
+                            width={390}
+                            placeholder="Nro de Documento"
+                            name="personDocument"
+                            maxLength={8}
+                            labelText={labelPersonDocument}
+                            noBorder
+                        />
+                    </DocumentWrapper>
                     <Field
                         component={RenderInput}
                         type="text"
@@ -57,6 +97,8 @@ const Form: React.FC<Props> = ({ handleSubmit }) => {
                         placeholder="Nombres"
                         name="personName"
                         maxLength={50}
+                        labelText={labelPersonName}
+                        margin="0 0 16px 0"
                     />
                     <Field
                         component={RenderInput}
@@ -65,6 +107,8 @@ const Form: React.FC<Props> = ({ handleSubmit }) => {
                         placeholder="Apellido Paterno"
                         name="personLastNameFather"
                         maxLength={50}
+                        labelText={labelPersonLastNameFather}
+                        margin="0 0 16px 0"
                     />
                     <Field
                         component={RenderInput}
@@ -73,6 +117,8 @@ const Form: React.FC<Props> = ({ handleSubmit }) => {
                         placeholder="Apellido Materno"
                         name="personLastNameMother"
                         maxLength={50}
+                        labelText={labelPersonLastNameMother}
+                        margin="0 0 16px 0"
                     />
                     <Field
                         component={RenderInput}
@@ -81,6 +127,8 @@ const Form: React.FC<Props> = ({ handleSubmit }) => {
                         placeholder="Fecha de Nacimiento"
                         name="personBirthDate"
                         maxLength={10}
+                        labelText={labelPersonBirthDate}
+                        margin="0 0 16px 0"
                     />
                 </FormWrapper>
             </Wrapper>
@@ -89,7 +137,5 @@ const Form: React.FC<Props> = ({ handleSubmit }) => {
 };
 
 export const PersonForm = reduxForm({
-    form: 'stepOne',
-    onSubmit(fields, dispatch){
-    }
+    form: 'stepOne'
 })(Form);

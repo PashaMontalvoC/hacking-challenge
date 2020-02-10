@@ -11,6 +11,7 @@ export const RimacBanner: React.FC<Props> = ({ children }) => (
         <div className="banner__title">
             <img src={rimacLogo} />
         </div>
+        <hr className="banner__subline" />
         {children}
         <img className="banner__family" />
     </div>

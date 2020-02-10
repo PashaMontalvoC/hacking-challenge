@@ -4,6 +4,27 @@ interface Props {
     disabled: boolean;
 }
 
+export const Wrapper = styled.div`
+    max-width: 288px;
+    display: flex;
+    flex-direction: column;
+`;
+
+export const DocumentWrapper = styled.div`
+    width: 288px;
+    border: 1px solid #C5CBE0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    margin-bottom: 16px;
+`;
+
+export const DocumentType = styled.div`
+    width: 90px;
+    border-right: 1px solid #C5CBE0;
+    display: flex;
+`;
+
 export const FormWrapper = styled.form`
     display: flex;
     flex-direction: column;
@@ -29,10 +50,4 @@ export const Button = styled.button`
         background: #F0F2FA;
         color: #C5CBE0;
     `}
-`;
-
-export const Wrapper = styled.div`
-    max-width: 288px;
-    display: flex;
-    flex-direction: column;
 `;

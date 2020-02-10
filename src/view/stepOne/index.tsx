@@ -3,9 +3,13 @@ import { Banner } from './banner/components/Banner';
 import { PersonForm } from './form/components/PersonForm';
 import './styled.scss';
 
-export const StepOne: React.FC = () => (
+interface Props {
+    history?: any;
+}
+
+export const StepOne: React.FC<Props> = ({ history }) => (
     <div className="stepOne">
         <Banner />
-        <PersonForm />
+        <PersonForm history={history} />
     </div>
 );

@@ -20,19 +20,19 @@ app.get('/dummy/obtenerdatospersona', (req, res) => {
         data: {
           tercero: {
             direccion: "PRUEBA PRUEBA",
-            nomCompleto: "JUAN MIGUEL SANCHEZ DIAZ",
+            nomCompleto: "Luisa Pérez Sánchez",
             indCrearTercero: "N",
             estadoCivil: "Z",
             tipoPersona: "N",
             telefono: "",
-            apellidoPaterno: "SANCHEZ",
+            apellidoPaterno: "Pérez",
             sexo: "M",
             indRequiereDireccion: "N",
             paisNacimiento: "80",
-            nombres: "JUAN MIGUEL",
+            nombres: "Luisa",
             stsTercero: "0",
             tipoDocumento: "2",
-            apellidoMaterno: "DIAZ",
+            apellidoMaterno: "Sánchez",
             numDocumento: "25809150",
             fecNacimiento: "11/05/1972",
             correo: ""

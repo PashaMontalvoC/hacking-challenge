@@ -22,6 +22,7 @@ export const fetchPerson = (history: any): Function => {
         try {
             const data = await servicePerson.post();
             dispatch(fetchPersonSuccess(data));
+            localStorage.setItem('rimacPerson', JSON.stringify(data));
             history.push('salud');
         } catch(e) {
             dispatch(fetchPersonFailure(e.message));

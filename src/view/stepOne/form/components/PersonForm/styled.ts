@@ -4,6 +4,12 @@ interface Props {
     disabled: boolean;
 }
 
+export const Wrapper = styled.div`
+    max-width: 505px;
+    display: flex;
+    flex-direction: column;
+`;
+
 export const FormWrapper = styled.form`
     display: flex;
     flex-direction: column;
@@ -31,8 +37,17 @@ export const Button = styled.button`
     `}
 `;
 
-export const Wrapper = styled.div`
-    max-width: 505px;
+export const DocumentWrapper = styled.div`
+    width: 480px;
+    border: 1px solid #C5CBE0;
+    box-sizing: border-box;
+    border-radius: 4px;
     display: flex;
-    flex-direction: column;
+    margin-bottom: 16px;
+`;
+
+export const DocumentType = styled.div`
+    width: 90px;
+    border-right: 1px solid #C5CBE0;
+    display: flex;
 `;

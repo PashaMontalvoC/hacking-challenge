@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Field } from '../Field';
 import { Input } from '../Input';
-import { LabelText, ErrorMessage } from './styled';
+import { Wrapper, LabelText, ErrorMessage } from './styled';
 
 export const RenderInput = ({
     input,
@@ -10,12 +10,14 @@ export const RenderInput = ({
     width,
     maxLength,
     type,
+    noBorder,
+    margin,
     meta: { error, touched }
 }) => {
     const errorMessage = (touched && error) ? error : null;
     return(
-        <React.Fragment>
-            <Field width={width} labelText={labelText}>
+        <Wrapper margin={margin}>
+            <Field width={width} labelText={labelText} noBorder={noBorder}>
                 {labelText && <LabelText>{labelText}</LabelText>}
                 <Input
                     {...input}
@@ -24,7 +26,7 @@ export const RenderInput = ({
                     type={type}
                 />
             </Field>
-        {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
-        </React.Fragment>
+            {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
+        </Wrapper>
     )
 }
