@@ -5,46 +5,46 @@ $lato: 'Lato', serif;
 $roboto: 'Roboto', sans-serif;
 
 .personForm {
-    width: calc(100% - 376px);
-    max-width: 100%;
-    padding: 68px 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  width: calc(100% - 376px);
+  max-width: 100%;
+  padding: 68px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
-    @media(max-width: 1240px) {
-        width: 100%;
-    }
+  @media(max-width: 1240px) {
+      width: 100%;
+  }
 }
 
 .personForm__title {
-    font-family: $lato;
-    margin: 0;
-    font-size: 40px;
-    line-height: 48px;
-    font-weight: 300;
-    color: #494F66;
-    margin-bottom: 16px;
+  font-family: $lato;
+  margin: 0;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 300;
+  color: #494F66;
+  margin-bottom: 16px;
 
-    span {
-        color: #EF3340;
-        font-weight: bold;
-    }
+  span {
+    color: #EF3340;
+    font-weight: bold;
+  }
 }
 
 .personForm__information {
-    font-family: $roboto;
-    margin-top: 8px;
-    font-size: 16px;
-    line-height: 28px;
-    color: #676F8F;
-    margin: 8px 0 48px 0;
+  font-family: $roboto;
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 28px;
+  color: #676F8F;
+  margin: 8px 0 48px 0;
 }
 
 .personForm__data {
-    font-family: $lato;
-    font-size: 20px;
-    line-height: 28px;
-    color: #494F66;
-    margin-bottom: 24px;
+  font-family: $lato;
+  font-size: 20px;
+  line-height: 28px;
+  color: #494F66;
+  margin-bottom: 24px;
 }

@@ -1,0 +1,30 @@
+.banner {
+  position: relative;
+  box-sizing: border-box;
+	height: 100%;
+	max-width: 100%;
+  background-image: url('../../../../assets/img/banner-simple.png');
+	background-position: center;
+	background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner__title {
+  padding-left: 120px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.banner__subline {
+  margin: 0;
+  border: 1px solid #FC4E55;
+  width: 99%;
+}
+
+.banner__family {
+  position: absolute;
+  right: -100px;
+  bottom: 200px;
+  content: url('../../../../assets/img/rimac-family.png');
+}

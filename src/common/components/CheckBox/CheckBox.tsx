@@ -65,7 +65,6 @@ export const CheckBox: React.FC<Props> = ({
   </Wrapper>
 )
 
-
 CheckBox.defaultProps = {
   borderColor: "#C5CBE0",
   size: 20,

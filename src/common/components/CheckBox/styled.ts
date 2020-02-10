@@ -84,10 +84,10 @@ export const Text = styled.span`
 `;
 
 export const CheckMark = styled.div`
-    display: inline-block;
-    transform: rotate(45deg);
-    height: 8px;
-    width: 4px;
-    border-bottom: 2px solid #FFFFFF;
-    border-right: 2px solid #FFFFFF;
+  display: inline-block;
+  transform: rotate(45deg);
+  height: 8px;
+  width: 4px;
+  border-bottom: 2px solid #FFFFFF;
+  border-right: 2px solid #FFFFFF;
 `;

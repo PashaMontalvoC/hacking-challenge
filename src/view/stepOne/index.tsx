@@ -4,12 +4,12 @@ import { PersonForm } from './form/components/PersonForm';
 import './styled.scss';
 
 interface Props {
-    history?: any;
+  history?: any;
 }
 
 export const StepOne: React.FC<Props> = ({ history }) => (
-    <div className="stepOne">
-        <Banner />
-        <PersonForm history={history} />
-    </div>
+  <div className="stepOne">
+    <Banner />
+    <PersonForm history={history} />
+  </div>
 );

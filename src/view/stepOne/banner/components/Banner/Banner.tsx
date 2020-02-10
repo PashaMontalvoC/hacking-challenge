@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { RimacBanner } from '../../../../../common/components/RimacBanner';
+import { RimacBannerBasic } from '../../../../../common/components/RimacBannerBasic';
 import './styled.scss';
 
 export const Banner: React.FC = () => (
-    <div className="bannerStepOne">
-        <RimacBanner />
-    </div>
+  <div className="bannerStepOne">
+    <RimacBannerBasic />
+  </div>
 )

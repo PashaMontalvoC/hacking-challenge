@@ -3,7 +3,7 @@ import { App } from '../../view';
 import { StepZero } from '../../view/stepZero';
 import { StepOne } from '../../view/stepOne';
 
-const NotFound:React.SFC<{}> = ()=><div>Not found</div>;
+const NotFound:React.SFC = () =><div>Not found</div>;
 
 export const Routes = [
   {

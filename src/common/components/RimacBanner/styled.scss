@@ -1,51 +1,51 @@
 .banner {
-    position: relative;
-    box-sizing: border-box;
+  position: relative;
+  box-sizing: border-box;
 	height: 100%;
 	max-width: 100%;
-    background-image: url('../../../../assets/img/banner-base.png');
+  background-image: url('../../../../assets/img/banner-base.png');
 	background-position: center;
 	background-repeat: no-repeat;
-    background-size: cover;
+  background-size: cover;
 
-    @media(max-width: 768px) {
-	    max-width: 100%;
-    }
+  @media(max-width: 768px) {
+    max-width: 100%;
+  }
 
-    @media(max-width: 320px) {
-        background-image: url('../../../../assets/img/banner-mobile.png');
-	    max-width: 320px;
-        height: 348px;
-    }
+  @media(max-width: 320px) {
+    background-image: url('../../../../assets/img/banner-mobile.png');
+    max-width: 320px;
+    height: 348px;
+  }
 }
 
 .banner__title {
-    padding-left: 120px;
-    height: 64px;
-    display: flex;
-    align-items: center;
+  padding-left: 120px;
+  height: 64px;
+  display: flex;
+  align-items: center;
 }
 
 .banner__subline {
-    margin: 0;
-    border: 1px solid #FC4E55;
-    width: 99%;
+  margin: 0;
+  border: 1px solid #FC4E55;
+  width: 99%;
 }
 
 .banner__family {
-    position: absolute;
-    right: -128px;
-    bottom: 20px;
-    content: url('../../../../assets/img/rimac-family.png');
+  position: absolute;
+  right: -128px;
+  bottom: 20px;
+  content: url('../../../../assets/img/rimac-family.png');
 
-    @media(max-width: 768px) {
-        right: -88px;
-        bottom: 0;
-    }
+  @media(max-width: 768px) {
+    right: -88px;
+    bottom: 0;
+  }
 
-    @media(max-width: 320px) {
-        content: url('../../../../assets/img/rimac-family-mobile.png');
-        right: 0;
-        bottom: 0;
-    }
+  @media(max-width: 320px) {
+    content: url('../../../../assets/img/rimac-family-mobile.png');
+    right: 0;
+    bottom: 0;
+  }
 }

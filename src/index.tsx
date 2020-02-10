@@ -18,13 +18,13 @@ const root = document.createElement('div');
 document.body.appendChild(root);
 
 ReactDOM.render(
-    <React.Fragment>
-        <GlobalStyle />
-        <Provider store={store}>
-            <Router>
-                {renderRoutes(Routes)}
-            </Router>
-        </Provider>
-    </React.Fragment>,
-    root
+  <React.Fragment>
+    <GlobalStyle />
+    <Provider store={store}>
+      <Router>
+        {renderRoutes(Routes)}
+      </Router>
+    </Provider>
+  </React.Fragment>,
+  root
 )

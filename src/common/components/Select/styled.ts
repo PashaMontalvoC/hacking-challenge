@@ -31,20 +31,20 @@ export const Text = styled.span`
 `;
 
 export const ArrowIcon = styled.span`
-    &:before {
-        border-style: solid;
-        border-width: 2px 2px 0 0;
-        content: '';
-        display: inline-block;
-        height: 7px;
-        left: 2px;
-        position: relative;
-        top: 2px;
-        transform: rotate(135deg);
-        vertical-align: top;
-        width: 7px;
-        color: #EF3340;
-    }
+  &:before {
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    content: '';
+    display: inline-block;
+    height: 7px;
+    left: 2px;
+    position: relative;
+    top: 2px;
+    transform: rotate(135deg);
+    vertical-align: top;
+    width: 7px;
+    color: #EF3340;
+  }
 `;
 
 export const OptionMaskWrapper = styled.div`

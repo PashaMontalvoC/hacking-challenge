@@ -5,62 +5,62 @@ $roboto: 'Roboto', sans-serif;
 $lato: 'Lato', 'sans-serif';
 
 .container {
-    width: 728px;
-    height: 608px;
+  width: 728px;
+  height: 608px;
 }
 
 .rimacBanner {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 84px 40px 40px 120px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 84px 40px 40px 120px;
 }
 
 .rimacBanner__title {
-    font-family: $lato;
-    margin: 0;
-    font-size: 48px;
-    line-height: 60px;
-    font-style: normal;
-    font-weight: 300;
-    color: #FFFFFF;
-    margin-bottom: 32px;
+  font-family: $lato;
+  margin: 0;
+  font-size: 48px;
+  line-height: 60px;
+  font-style: normal;
+  font-weight: 300;
+  color: #FFFFFF;
+  margin-bottom: 32px;
 
-    span {
-        display: block;
-        font-weight: bold;
-    }
+  span {
+    display: block;
+    font-weight: bold;
+  }
 }
 
 .rimacBanner__icon {
-    width: 20px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 20px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .rimacBanner__information {
-    width: 100%;
-    display: flex;
-    font-family: $roboto;
-    font-size: 16px;
-    line-height: 28px;
-    color: #FFFFFF;
-    font-style: normal;
-    font-weight: 300;
-    align-items: center;
-    margin: 14px 0;
+  width: 100%;
+  display: flex;
+  font-family: $roboto;
+  font-size: 16px;
+  line-height: 28px;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 300;
+  align-items: center;
+  margin: 14px 0;
 
-    span {
-        margin-left: 20px;
-    }
+  span {
+    margin-left: 20px;
+  }
 }
 
 .rimacBanner__footer {
-    font-family: $roboto;
-    font-size: 12px;
-    line-height: 20px;
-    color: #FFD7DA;
-    margin-top: 84px;
-    opacity: .5;
+  font-family: $roboto;
+  font-size: 12px;
+  line-height: 20px;
+  color: #FFD7DA;
+  margin-top: 84px;
+  opacity: .5;
 }

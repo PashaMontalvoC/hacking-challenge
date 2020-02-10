@@ -1,5 +1,5 @@
 export const required = (value: string) => {
-    return value ? undefined : "Campo requerido";
+  return value ? undefined : "Campo requerido";
 };
 
 export const minLength = (number: number, message?: string) => (value: string) => {
@@ -20,54 +20,54 @@ export const birthDate = (value: string): string => {
   }
 
   const arrayMonths = [
-      {
-          id: 1,
-          days: 31
-      },
-      {
-          id: 2,
-          days: 28
-      },
-      {
-          id: 3,
-          days: 31
-      },
-      {
-          id: 4,
-          days: 30
-      },
-      {
-          id: 5,
-          days: 31
-      },
-      {
-          id: 6,
-          days: 30
-      },
-      {
-          id: 7,
-          days: 31
-      },
-      {
-          id: 8,
-          days: 31
-      },
-      {
-          id: 9,
-          days: 30
-      },
-      {
-          id: 10,
-          days: 31
-      },
-      {
-          id: 11,
-          days: 30
-      },
-      {
-          id: 12,
-          days: 31
-      }
+    {
+      id: 1,
+      days: 31
+    },
+    {
+      id: 2,
+      days: 28
+    },
+    {
+      id: 3,
+      days: 31
+    },
+    {
+      id: 4,
+      days: 30
+    },
+    {
+      id: 5,
+      days: 31
+    },
+    {
+      id: 6,
+      days: 30
+    },
+    {
+      id: 7,
+      days: 31
+    },
+    {
+      id: 8,
+      days: 31
+    },
+    {
+      id: 9,
+      days: 30
+    },
+    {
+      id: 10,
+      days: 31
+    },
+    {
+      id: 11,
+      days: 30
+    },
+    {
+      id: 12,
+      days: 31
+    }
   ];
 
   const date = value.split('/');
@@ -80,11 +80,11 @@ export const birthDate = (value: string): string => {
   const dateFilter = arrayMonths.filter(date => date.id === month && (1 <= day && day <= date.days))[0]
 
   if (!dateFilter) {
-      return 'Ingrese fecha válida';
+    return 'Ingrese fecha válida';
   }
 
   if ((year < minYearValid) || (year > maxYearValid)) {
-      return 'Edad fuera de rango';
+    return 'Edad fuera de rango';
   }
 
   return null;

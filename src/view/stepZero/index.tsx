@@ -4,12 +4,12 @@ import { LoginFeature } from './login';
 import './styled.scss';
 
 interface Props {
-    history?: any;
+  history?: any;
 }
 
 export const StepZero: React.FC<Props> = ({ history }) => (
-    <div className="stepZero">
-        <BannerFeature />
-        <LoginFeature history={history} />
-    </div>
+  <div className="stepZero">
+    <BannerFeature />
+    <LoginFeature history={history} />
+  </div>
 );

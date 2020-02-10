@@ -1,7 +1,6 @@
 import * as actionTypes from './actionTypes';
 import { PersonModel } from '../../model/personModel';
 
-
 interface State {
   data: PersonModel;
   isFetching: boolean;
