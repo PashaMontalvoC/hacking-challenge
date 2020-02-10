@@ -1,4 +1,4 @@
-.banner {
+.bannerBasic {
   position: relative;
   box-sizing: border-box;
 	height: 100%;
@@ -9,20 +9,20 @@
   background-size: cover;
 }
 
-.banner__title {
+.bannerBasic__title {
   padding-left: 120px;
   height: 64px;
   display: flex;
   align-items: center;
 }
 
-.banner__subline {
+.bannerBasic__subline {
   margin: 0;
   border: 1px solid #FC4E55;
   width: 99%;
 }
 
-.banner__family {
+.bannerBasic__family {
   position: absolute;
   right: -100px;
   bottom: 200px;
